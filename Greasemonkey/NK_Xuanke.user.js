@@ -12,9 +12,9 @@ window.onload = function () {
         sel[j].id = sel[j].name;
     }
     var aa = window.top.document.getElementsByName('leftFrame') [0];
-    if(aa){ //patch for the side bar
-            aa = aa.contentDocument;
-            var t = 110;
+    var side = function(w){
+      var aa = w.contentDocument;
+      var t = 110;
             for (var i = 0; i < 21; i++) {
                 var tmp = aa.getElementById('MFX' + i);
                 if (tmp) {
@@ -23,6 +23,10 @@ window.onload = function () {
                     t = t + 12;
             }
         }
+    };
+    if(aa){ //patch for the side bar
+        side(aa);            
+        aa.onload = side(this);
     }
     var cc = window.top.document.getElementsByName('mainFrame') [0];
     if(cc){
