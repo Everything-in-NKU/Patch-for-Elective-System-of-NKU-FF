@@ -13,7 +13,7 @@ window.onload = function () {
     }
     var aa = window.top.document.getElementsByName('leftFrame') [0];
     if(aa){ //patch for the side bar
-            aa = this.contentDocument;
+            aa = aa.contentDocument;
             var t = 110;
             for (var i = 0; i < 21; i++) {
                 var tmp = aa.getElementById('MFX' + i);
