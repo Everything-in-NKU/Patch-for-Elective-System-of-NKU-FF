@@ -12,8 +12,7 @@ window.onload = function () {
         sel[j].id = sel[j].name;
     }
     var aa = window.top.document.getElementsByName('leftFrame') [0];
-    if(aa){
-        aa.onload = function(){ //patch for the side bar
+    if(aa){ //patch for the side bar
             aa = this.contentDocument;
             var t = 110;
             for (var i = 0; i < 21; i++) {
@@ -22,7 +21,6 @@ window.onload = function () {
                     tmp.style['visibility'] = 'visible';
                     tmp.style['top'] = t + 'px';
                     t = t + 12;
-                }
             }
         }
     }
