@@ -11,15 +11,17 @@ window.onload = function () {
         sel[j].id = sel[j].name;
     }
     var aa = window.top.document.getElementsByName('leftFrame') [0];
-    aa.onload = function(){ //patch for the side bar
-        aa = this.contentDocument;
-        var t = 110;
-        for (var i = 0; i < 21; i++) {
-            var tmp = aa.getElementById('MFX' + i);
-            if (tmp) {
-                tmp.style['visibility'] = 'visible';
-                tmp.style['top'] = t + 'px';
-                t = t + 12;
+    if(aa){
+        aa.onload = function(){ //patch for the side bar
+            aa = this.contentDocument;
+            var t = 110;
+            for (var i = 0; i < 21; i++) {
+                var tmp = aa.getElementById('MFX' + i);
+                if (tmp) {
+                    tmp.style['visibility'] = 'visible';
+                    tmp.style['top'] = t + 'px';
+                    t = t + 12;
+                }
             }
         }
     }
@@ -27,7 +29,7 @@ window.onload = function () {
     if(cc){
         cc.onload = function () {
             dd  = this.contentDocument.getElementsByTagName("input");
-            this.contentWindow.localtion = this.contentWindow.location
+            this.contentWindow.localtion = this.contentWindow.location;
             for(var i = 0; i<dd.length; i++){
                 dd[i].name?eval("var " + dd[i].name + " = dd["+i+"]"):eval("");
                 dd[i].id = dd[i].name;
