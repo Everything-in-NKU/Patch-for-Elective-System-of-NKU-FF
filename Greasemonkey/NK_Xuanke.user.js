@@ -4,6 +4,7 @@
 // @include     http://222.30.32.10/*
 // @version     1
 // @grant       none
+// @run-at      document-start
 // ==/UserScript==
 window.onload = function () {
     var sel = document.getElementsByTagName("input");
