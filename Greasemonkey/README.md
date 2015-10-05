@@ -13,7 +13,7 @@ For Chrome:
 
 For Opera & Safari & Dolphin & UC on Android:
 
-1. 去Tampermonkey官网找到对应浏览器 [Opera](http://tampermonkey.net/?ext=dhdg&browser=opera) [Safari](http://tampermonkey.net/?ext=dhdg&browser=safari) [Dolphin](http://tampermonkey.net/?ext=dhdg&browser=dolphin) [UC for Android](http://tampermonkey.net/?ext=dhdg&browser=ucweb) 版本的Tampermonkey并安装
+1. 去Tampermonkey官网找到对应浏览器 [Opera](http://tampermonkey.net/?ext=dhdg&browser=opera) \/ [Safari](http://tampermonkey.net/?ext=dhdg&browser=safari) \/ [Dolphin](http://tampermonkey.net/?ext=dhdg&browser=dolphin) \/ [UC for Android](http://tampermonkey.net/?ext=dhdg&browser=ucweb) 版本的Tampermonkey并安装
 2. 装好以后在浏览器中直接点击[NK_Xuanke.user.js](https://raw.githubusercontent.com/NKUCodingCat/Patch-for-Elective-System-of-NKU-FF/master/Greasemonkey/NK_Xuanke.user.js)并选择安装(请不要选择其他的什么奇怪的选项)
 3. 没了
 
