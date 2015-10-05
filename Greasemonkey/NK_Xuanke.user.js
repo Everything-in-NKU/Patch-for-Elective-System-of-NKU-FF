@@ -7,6 +7,7 @@
 // @run-at      document-start
 // ==/UserScript==
 window.onload = function () {
+	if(this !== window.top)return;
     var sel = document.getElementsByTagName("input");
     for(var j = 0;j < sel.length; j++){
         sel[j].id = sel[j].name;
@@ -14,6 +15,7 @@ window.onload = function () {
     var aa = window.top.document.getElementsByName('leftFrame') [0];
     var side = function(w){
       var aa = w.contentDocument;
+	  if (!aa)return;
       var t = 110;
             for (var i = 0; i < 21; i++) {
                 var tmp = aa.getElementById('MFX' + i);
