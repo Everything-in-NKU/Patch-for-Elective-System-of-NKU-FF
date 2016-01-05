@@ -2,7 +2,7 @@
 // @name        NK_Xuanke
 // @namespace   nku
 // @include     http://222.30.32.10/*
-// @version     1
+// @version     1.0.1
 // @grant       none
 // @run-at      document-start
 // ==/UserScript==
