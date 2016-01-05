@@ -31,6 +31,7 @@ window.onload = function () {
         aa.onload = side(this);
     }
     var cc = window.top.document.getElementsByName('mainFrame') [0];
+    
     if(cc){
         cc.onload = function () {
             dd  = this.contentDocument.getElementsByTagName("input");
@@ -39,6 +40,17 @@ window.onload = function () {
                 dd[i].name?eval("var " + dd[i].name + " = dd["+i+"]"):eval("");
                 dd[i].id = dd[i].name;
             }
+            
+            //Patch for Page Change
+            function J(n){return n.tagName=='FORM'?n:(n.parentNode.tagName=='FORM'?n.parentNode:(n.parentNode==null?null:J(n.parentNode)) )};
+            ee = this.contentDocument.getElementsByTagName("a");
+            for(var j = 0; j<ee.length; j++){
+                eval(
+                    'ee[j].onclick = ' + ee[j].onclick.toString().replace(/submit/g, 'J(this).submit')
+                );
+            }
+            
+            //--END--
         }
     }
     else{}
